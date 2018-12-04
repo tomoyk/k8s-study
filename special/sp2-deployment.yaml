@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sp2-deployment
+  namespace: sp2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: sample-app
+  template:
+    metadata:
+      labels:
+        app: sample-app
+    spec:
+      containers:
+        - name: nginx-host-container
+          image: makocchi/docker-nginx-hostname
+          ports:
+            - containerPort: 80
+
