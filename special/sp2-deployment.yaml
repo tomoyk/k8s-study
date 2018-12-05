@@ -4,7 +4,7 @@ metadata:
   name: sp2-deployment
   namespace: sp2
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: sample-app
